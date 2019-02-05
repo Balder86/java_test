@@ -25,8 +25,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @Slf4j
 public class InvertedForeignKeyTest {
 
-    @PersistenceUnit
-    private EntityManagerFactory emf;
+//    @PersistenceUnit
+//    private EntityManagerFactory emf;
     
     @Autowired
     private ServiceRepository srvRepo;
