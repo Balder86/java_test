@@ -12,6 +12,12 @@ info:
 # Shows what Spring Boot autodetection is actually doing
 debug: true
 
+management:
+    endpoints:
+        web:
+            exposure:
+                include: prometheus
+
 #
 # Logging
 # (https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html)
@@ -28,10 +34,3 @@ server:
         basedir: tomcat
         accesslog:
             enabled: true
-
-# Damit JAX-RS (Jersey) und Spring WebMVC gemeinsam benutzt werden können.
-# Sonst: "The bean 'requestContextFilter' ... has already been defined"
-# Siehe https://stackoverflow.com/questions/53091306/spring-boot-2-1-0-with-jersey
-spring:
-    main:
-        allow-bean-definition-overriding: true
