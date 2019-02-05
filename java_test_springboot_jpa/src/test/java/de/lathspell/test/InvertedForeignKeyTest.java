@@ -54,6 +54,7 @@ public class InvertedForeignKeyTest {
         
         Filter f = new Filter();      
         r.setFilter(f);
+        f.setRouting(r);
         //Der wichtige Punkt ist, dass nicht im Filter wo die eigentlich Redferenz steht
         //der Key gesetzt wird. Weder nur dort und auch nicht an beiden Stellen.
         // --> Was Funktioniert ist nur, angesichts der Hirachie, auf dem oberen Element die Verbindung zu setzen, auch wenn diese invers ist
