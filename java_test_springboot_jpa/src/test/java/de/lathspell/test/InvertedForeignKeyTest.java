@@ -65,12 +65,13 @@ public class InvertedForeignKeyTest {
         assertThat(srvRepo.findAll().size() == 1);
         
         assertThat(rtRepo.findAll().size() == 1);
-        log.debug("Routing gespeichert: {}", rtRepo.findAll().get(0).toString());
-        log.debug("Lokale Routing Referenz: {}", r.toString());
+        log.info("Routing gespeichert: {}", rtRepo.findAll().get(0).toString());
+        log.info("Lokale Routing Referenz: {}", r.toString());
         
         assertThat(fRepo.findAll().size() == 1);
-        log.debug("Filter gespeichert: {}", fRepo.findAll().get(0).toString());
-        log.debug("Lokale Routing Referenz: {}", f.toString());
+        assertNotNull(fRepo.findAll().get(0).getRouting());
+        log.info("Filter gespeichert: {}", fRepo.findAll().get(0).toString());
+        log.info("Lokale Routing Referenz: {}", f.toString());
     }
     
     

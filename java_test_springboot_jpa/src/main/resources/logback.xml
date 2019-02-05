@@ -13,15 +13,11 @@
         </encoder>
     </appender>
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="CONSOLE" />
     </root>
     
     <logger name="de.lathspell" level="DEBUG" />
     <logger name="com.zaxxer.hikari" level="INFO" />
-    <logger name="org.hibernate" level="INFO" />
-    <logger name="org.hibernate.SQL" level="DEBUG" /> <!-- prepared statements -->
-    <logger name="org.hibernate.type" level="TRACE" /> <!-- variable bindings for prepared statements -->
-    <logger name="org.hibernate.type.BasicTypeRegistry" level="INFO" />
     
 </configuration>
